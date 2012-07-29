@@ -18,4 +18,6 @@ def get_encoding(page):
     #print '->', enc, "%.2f" % res['confidence']
     if enc == 'MacCyrillic':
         enc = 'cp1251'
+    elif enc is None:
+        enc = 'utf-8'
     return enc
